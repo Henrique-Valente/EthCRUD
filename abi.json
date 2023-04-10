@@ -1,0 +1,344 @@
+[
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "unique_id",
+              "type": "uint256"
+            },
+            {
+              "internalType": "string",
+              "name": "description",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "state",
+              "type": "string"
+            },
+            {
+              "internalType": "string[]",
+              "name": "materials",
+              "type": "string[]"
+            }
+          ],
+          "indexed": false,
+          "internalType": "struct BatteryStorage.Battery",
+          "name": "newBattery",
+          "type": "tuple"
+        }
+      ],
+      "name": "LogBattery",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "unique_id",
+              "type": "uint256"
+            },
+            {
+              "internalType": "string",
+              "name": "description",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "manufacturer",
+              "type": "string"
+            },
+            {
+              "internalType": "string[]",
+              "name": "certifications",
+              "type": "string[]"
+            }
+          ],
+          "indexed": false,
+          "internalType": "struct BatteryStorage.Material",
+          "name": "newMaterial",
+          "type": "tuple"
+        }
+      ],
+      "name": "LogMaterial",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "batteries",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "unique_id",
+          "type": "uint256"
+        },
+        {
+          "internalType": "string",
+          "name": "description",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "state",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function",
+      "constant": true
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "materials",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "unique_id",
+          "type": "uint256"
+        },
+        {
+          "internalType": "string",
+          "name": "description",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "manufacturer",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function",
+      "constant": true
+    },
+    {
+      "inputs": [],
+      "name": "getMaterials",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "unique_id",
+              "type": "uint256"
+            },
+            {
+              "internalType": "string",
+              "name": "description",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "manufacturer",
+              "type": "string"
+            },
+            {
+              "internalType": "string[]",
+              "name": "certifications",
+              "type": "string[]"
+            }
+          ],
+          "internalType": "struct BatteryStorage.Material[]",
+          "name": "",
+          "type": "tuple[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function",
+      "constant": true
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "unique_id",
+          "type": "uint256"
+        }
+      ],
+      "name": "getMaterial",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "unique_id",
+              "type": "uint256"
+            },
+            {
+              "internalType": "string",
+              "name": "description",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "manufacturer",
+              "type": "string"
+            },
+            {
+              "internalType": "string[]",
+              "name": "certifications",
+              "type": "string[]"
+            }
+          ],
+          "internalType": "struct BatteryStorage.Material",
+          "name": "",
+          "type": "tuple"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function",
+      "constant": true
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "unique_id",
+          "type": "uint256"
+        },
+        {
+          "internalType": "string",
+          "name": "description",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "manufacturer",
+          "type": "string"
+        },
+        {
+          "internalType": "string[]",
+          "name": "certifications",
+          "type": "string[]"
+        }
+      ],
+      "name": "setMaterial",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getBatteries",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "unique_id",
+              "type": "uint256"
+            },
+            {
+              "internalType": "string",
+              "name": "description",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "state",
+              "type": "string"
+            },
+            {
+              "internalType": "string[]",
+              "name": "materials",
+              "type": "string[]"
+            }
+          ],
+          "internalType": "struct BatteryStorage.Battery[]",
+          "name": "",
+          "type": "tuple[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function",
+      "constant": true
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "unique_id",
+          "type": "uint256"
+        }
+      ],
+      "name": "getBattery",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "unique_id",
+              "type": "uint256"
+            },
+            {
+              "internalType": "string",
+              "name": "description",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "state",
+              "type": "string"
+            },
+            {
+              "internalType": "string[]",
+              "name": "materials",
+              "type": "string[]"
+            }
+          ],
+          "internalType": "struct BatteryStorage.Battery",
+          "name": "",
+          "type": "tuple"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function",
+      "constant": true
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "unique_id",
+          "type": "uint256"
+        },
+        {
+          "internalType": "string",
+          "name": "description",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "state",
+          "type": "string"
+        },
+        {
+          "internalType": "string[]",
+          "name": "input_materials",
+          "type": "string[]"
+        }
+      ],
+      "name": "setBattery",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ]
